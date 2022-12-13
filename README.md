@@ -3,12 +3,23 @@
 ## This is a quick API to show,search and sort data from [data](https://data.nist.gov/rmm/records)
 
 
-## Prerequisite 
 
-you need to have docker installed. If you don't, you can download it at [docker](https://www.docker.com/) 
 ## RUN
+
+### With Docker
+#### Prerequisite 
+you need to have docker installed. If you don't, you can download it at [docker](https://www.docker.com/) 
+
 - docker build -t rmm .
 - docker run -d -p 5000:5000  rmm
+
+### Local 
+#### Prerequisite
+Make sure you have python(3.7.3) and pip(22.3.1) installed
+
+- pip install flask
+- pip install -r requirements.txt
+- python3 rmm/index.py
 
 ### Keys from the data 
 ["_id", "@context", "_schema", "_extensionSchemas", "@type", "@id", "title", "contactPoint", "modified", "status", "ediid", "landingPage", "description", "keyword", "theme", "topic", "references", "accessLevel", "license", "inventory", "components", "publisher", "language", "bureauCode", "programCode","version"]
